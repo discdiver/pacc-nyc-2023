@@ -1,0 +1,55 @@
+###
+### A complete description of a Prefect Deployment for flow 'upload-to-gcs'
+###
+name: load-gcs-data
+description: The main flow function to upload taxi data
+version: 8921cd54acf761168fe4f2df47f89784
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: upload-to-gcs
+manifest_path: null
+storage: null
+path: /Users/jeffhale/Desktop/prefect/demos/pacc/pacc-demos-feb-6-2023
+entrypoint: 203/upload_to_gcs.py:upload_to_gcs
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    color:
+      title: color
+      position: 0
+      type: string
+    year:
+      title: year
+      position: 1
+      type: integer
+    month:
+      title: month
+      position: 2
+      type: integer
+  required:
+  - color
+  - year
+  - month
+  definitions: null
+timestamp: '2023-02-09T03:16:13.623280+00:00'
