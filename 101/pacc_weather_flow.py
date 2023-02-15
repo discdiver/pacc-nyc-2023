@@ -21,7 +21,7 @@ def save_weather(temp: float):
 
 @flow()
 def pipeline(coord: list):
-    """iterate over list of dictionaries containing latitude and longitude, append weather result to csv. """
+    """iterate over list of dictionaries containing latitude and longitude, append temperature result to list. """
     results = []
     for i in coord:
         lat = i['lat']
